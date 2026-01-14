@@ -2,66 +2,75 @@ const FooterNew = () => {
   return (
     <footer style={{
       padding: '60px 20px 40px',
-      backgroundColor: 'var(--gris-clair)',
-      textAlign: 'center'
+      backgroundColor: 'var(--bg-dark)',
+      borderTop: '1px solid var(--border-glass)'
     }}>
       <div style={{
         maxWidth: '1200px',
         margin: '0 auto'
       }}>
         <div style={{
-          marginBottom: '30px'
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '30px',
+          marginBottom: '40px'
         }}>
-          <h3 style={{
-            fontSize: '24px',
-            fontWeight: '700',
-            color: 'var(--vert-bouteille)',
-            marginBottom: '20px',
-            letterSpacing: '-0.5px'
-          }}>
-            MATISSE
-          </h3>
-          <p style={{
-            fontSize: '16px',
-            color: 'var(--noir)',
-            opacity: 0.6,
-            marginBottom: '20px'
-          }}>
-            matisse.contact@gmail.com
-          </p>
+          <div>
+            <h3 style={{
+              fontSize: '24px',
+              fontWeight: '700',
+              color: 'var(--vert-accent)',
+              marginBottom: '10px',
+              letterSpacing: '1px'
+            }}>
+              MATISSE
+            </h3>
+            <p style={{
+              fontSize: '14px',
+              color: 'var(--text-gray)',
+              letterSpacing: '0.5px'
+            }}>
+              Street Food d'Exception
+            </p>
+          </div>
+          
           <div style={{
             display: 'flex',
-            justifyContent: 'center',
-            gap: '20px',
-            marginBottom: '30px'
+            gap: '30px',
+            alignItems: 'center'
           }}>
             {['Facebook', 'Instagram', 'TikTok'].map((social) => (
               <a
                 key={social}
                 href="#"
                 style={{
-                  color: 'var(--vert-bouteille)',
+                  color: 'var(--text-gray)',
                   textDecoration: 'none',
                   fontSize: '14px',
                   fontWeight: '500',
-                  transition: 'opacity 0.3s ease'
+                  transition: 'color 0.3s ease',
+                  letterSpacing: '0.5px'
                 }}
-                onMouseEnter={(e) => e.target.style.opacity = '0.6'}
-                onMouseLeave={(e) => e.target.style.opacity = '1'}
+                onMouseEnter={(e) => e.target.style.color = 'var(--vert-accent)'}
+                onMouseLeave={(e) => e.target.style.color = 'var(--text-gray)'}
               >
                 {social}
               </a>
             ))}
           </div>
         </div>
+        
         <div style={{
           paddingTop: '30px',
-          borderTop: '1px solid rgba(27, 67, 50, 0.1)',
+          borderTop: '1px solid rgba(74, 222, 128, 0.1)',
           fontSize: '14px',
-          color: 'var(--noir)',
-          opacity: 0.5
+          color: 'var(--text-muted)',
+          textAlign: 'center',
+          letterSpacing: '0.5px'
         }}>
-          © 2024 Matisse Food
+          © 2024 Matisse Food. Tous droits réservés.
         </div>
       </div>
     </footer>
