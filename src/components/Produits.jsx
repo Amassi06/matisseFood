@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -8,7 +9,6 @@ gsap.registerPlugin(ScrollTrigger)
 
 const Produits = () => {
   const sectionRef = useRef(null)
-  const scrollContainerRef = useRef(null)
 
   const categories = {
     sandwiches: {

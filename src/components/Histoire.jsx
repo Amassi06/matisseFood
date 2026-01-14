@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -11,7 +12,7 @@ const Histoire = () => {
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Animate sections on scroll
-      gsap.utils.toArray('.histoire-section').forEach((section, index) => {
+      gsap.utils.toArray('.histoire-section').forEach((section) => {
         gsap.fromTo(section,
           { y: 100, opacity: 0 },
           {

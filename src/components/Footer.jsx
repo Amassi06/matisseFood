@@ -2,6 +2,7 @@ import { useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion'
 
 gsap.registerPlugin(ScrollTrigger)
