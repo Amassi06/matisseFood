@@ -1,16 +1,49 @@
-# React + Vite
+# Matisse Food - Site Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site web minimaliste style Apple/McDonald's pour Matisse Food, restaurant de street food inspiré par l'art de Henri Matisse.
 
-Currently, two official plugins are available:
+## 🎨 Design
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Le site utilise un design ultra-minimaliste avec :
+- **Palette de couleurs stricte** : Vert bouteille (#1B4332), Blanc (#FFFFFF), Noir (#000000), Gris clair (#F5F5F7)
+- **Typographie Apple** : SF Pro Display, système fonts
+- **Animations subtiles** : Transitions 0.3s ease, hover effects légers
+- **Layout single-page** : Navigation smooth scroll
+- **Mobile-first responsive** : Menu hamburger sur mobile
 
-## React Compiler
+## 🚀 Installation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+## 📦 Build
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm run build
+npm run preview
+```
+
+## 📝 Structure
+
+- `src/AppNew.jsx` - Application principale (single-page)
+- `src/components/*New.jsx` - Composants redesignés style Apple/McDo
+- `public/images/` - Images des menus (à ajouter)
+
+## 🖼️ Images des Menus
+
+Les 4 images de menu doivent être placées dans `public/images/` :
+- `menu1.jpg` - Sandwichs & Bowls
+- `menu2.jpg` - Tacos
+- `menu3.jpg` - Smashs (burgers)
+- `menu4.jpg` - Tenders, Frites, Desserts & Boissons
+
+## 📍 Restaurants
+
+- **Paris 14ème** : 60 avenue du General Leclerc, 75014 Paris - 01 45 42 54 99
+- **Ivry-sur-Seine** : 10 bis rue Barbès, 94200 Ivry-sur-Seine - 01 45 21 01 37
+
+## 📧 Contact
+
+Email : matisse.contact@gmail.com
