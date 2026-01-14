@@ -1,33 +1,11 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: 'Playfair Display';
-  src: url('https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtM.woff2') format('woff2');
-  font-weight: 400 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url('https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXo.woff2') format('woff2');
-  font-weight: 100 900;
-  font-style: normal;
-}
-
 :root {
-  /* Palette Matisse Food */
-  --matisse-green-bottle: #1B4332;
-  --matisse-cream: #FEFAE0;
-  --matisse-terra-cotta: #BC6C25;
-  --matisse-green-light: #52B788;
-  
-  /* Legacy colors for existing components */
-  --matisse-blue: #1B4332;
-  --matisse-red: #BC6C25;
-  --matisse-yellow: #52B788;
-  --matisse-green: #52B788;
-  --matisse-orange: #BC6C25;
-  --matisse-dark: #1B4332;
+  /* Palette stricte Apple/McDo */
+  --vert-bouteille: #1B4332;
+  --blanc: #FFFFFF;
+  --noir: #000000;
+  --gris-clair: #F5F5F7;
 }
 
 * {
@@ -41,78 +19,66 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: var(--matisse-cream);
-  color: var(--matisse-dark);
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--blanc);
+  color: var(--noir);
   overflow-x: hidden;
+  line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  font-weight: 700;
 }
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--matisse-cream);
+  background: var(--gris-clair);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--matisse-blue);
-  border-radius: 5px;
+  background: var(--vert-bouteille);
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--matisse-red);
-}
-
-/* Custom cursor */
-.cursor-dot {
-  width: 8px;
-  height: 8px;
-  background-color: var(--matisse-red);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: difference;
-}
-
-.cursor-outline {
-  width: 40px;
-  height: 40px;
-  border: 2px solid var(--matisse-blue);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 9998;
-  mix-blend-mode: difference;
+  background: #0f2a1f;
 }
 
 /* Selection */
 ::selection {
-  background-color: var(--matisse-yellow);
-  color: var(--matisse-dark);
+  background-color: var(--vert-bouteille);
+  color: var(--blanc);
 }
 
 /* Smooth transitions */
 a, button {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
 }
 
-/* Loader */
-.loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: var(--matisse-cream);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10000;
+/* Utility classes */
+.section {
+  padding: 80px 20px;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 120px 40px;
+  }
+}
+
+.container-custom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+  .container-custom {
+    padding: 0 40px;
+  }
 }
