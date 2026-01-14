@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+// eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'framer-motion'
 import gsap from 'gsap'
 
@@ -28,8 +29,10 @@ const Navbar = () => {
   }, [])
 
   useEffect(() => {
+    // Close mobile menu when route changes
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsOpen(false)
-  }, [location])
+  }, [location.pathname])
 
   useEffect(() => {
     if (isOpen) {
@@ -131,7 +134,7 @@ const Navbar = () => {
               <div className="absolute bottom-20 right-20 w-20 h-20 bg-[var(--matisse-yellow)] rounded-full opacity-30" />
 
               <div className="flex flex-col justify-center items-center h-full gap-8 pt-20">
-                {navItems.map((item, index) => (
+                {navItems.map((item) => (
                   <Link
                     key={item.path}
                     to={item.path}

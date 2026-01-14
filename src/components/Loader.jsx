@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion'
 
 const Loader = () => {
