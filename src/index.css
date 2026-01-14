@@ -1,11 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 :root {
-  /* Palette stricte Apple/McDo */
+  /* Fonds */
+  --bg-dark: #0A1A14;
+  --bg-card: rgba(27, 67, 50, 0.3);
+  
+  /* Accents */
   --vert-bouteille: #1B4332;
-  --blanc: #FFFFFF;
-  --noir: #000000;
-  --gris-clair: #F5F5F7;
+  --vert-accent: #4ADE80;
+  --vert-glow: #22C55E;
+  
+  /* Textes */
+  --text-white: #FFFFFF;
+  --text-gray: #94A3B8;
+  --text-muted: #64748B;
+  
+  /* Bordures */
+  --border-glass: rgba(74, 222, 128, 0.2);
+  
+  /* Typographie */
+  --text-hero: clamp(3rem, 8vw, 6rem);
+  --text-section: clamp(2rem, 4vw, 3rem);
+  --text-body: 1rem;
+  --text-small: 0.875rem;
 }
 
 * {
@@ -19,15 +37,15 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
-  background-color: var(--blanc);
-  color: var(--noir);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-white);
   overflow-x: hidden;
   line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 700;
 }
 
@@ -37,27 +55,44 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--gris-clair);
+  background: var(--bg-dark);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--vert-bouteille);
+  background: var(--vert-accent);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0f2a1f;
+  background: var(--vert-glow);
 }
 
 /* Selection */
 ::selection {
-  background-color: var(--vert-bouteille);
-  color: var(--blanc);
+  background-color: var(--vert-accent);
+  color: var(--bg-dark);
 }
 
 /* Smooth transitions */
 a, button {
   transition: all 0.3s ease;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(27, 67, 50, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(74, 222, 128, 0.1);
+  border-radius: 16px;
+}
+
+/* Glow effect */
+.glow {
+  box-shadow: 0 0 20px rgba(74, 222, 128, 0.3);
+}
+
+.glow-hover:hover {
+  box-shadow: 0 0 30px rgba(74, 222, 128, 0.5);
 }
 
 /* Utility classes */

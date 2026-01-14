@@ -1,17 +1,20 @@
 import { useEffect, useRef } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import NavbarNew from './components/NavbarNew'
 import HeroNew from './components/HeroNew'
-import HistoireNew from './components/HistoireNew'
 import ProduitsNew from './components/ProduitsNew'
 import CommanderNew from './components/CommanderNew'
 import RestaurantsNew from './components/RestaurantsNew'
 import FooterNew from './components/FooterNew'
 
+gsap.registerPlugin(ScrollTrigger)
+
 function AppNew() {
   const mainRef = useRef(null)
 
   useEffect(() => {
-    // Simple smooth scroll behavior
+    // Smooth scroll behavior
     document.documentElement.style.scrollBehavior = 'smooth'
     
     return () => {
@@ -20,11 +23,10 @@ function AppNew() {
   }, [])
 
   return (
-    <div ref={mainRef} style={{ minHeight: '100vh' }}>
+    <div ref={mainRef} style={{ minHeight: '100vh', backgroundColor: 'var(--bg-dark)' }}>
       <NavbarNew />
       <main>
         <HeroNew />
-        <HistoireNew />
         <ProduitsNew />
         <CommanderNew />
         <RestaurantsNew />
