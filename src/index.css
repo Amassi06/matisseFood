@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('https://fonts.gstatic.com/s/playfairdisplay/v30/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtM.woff2') format('woff2');
+  font-weight: 400 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('https://fonts.gstatic.com/s/montserrat/v26/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXo.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+:root {
+  /* Palette Matisse */
+  --matisse-blue: #1e3a8a;
+  --matisse-red: #dc2626;
+  --matisse-yellow: #fbbf24;
+  --matisse-green: #059669;
+  --matisse-orange: #ea580c;
+  --matisse-cream: #fef3e2;
+  --matisse-dark: #1a1a2e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--matisse-cream);
+  color: var(--matisse-dark);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--matisse-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--matisse-blue);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--matisse-red);
+}
+
+/* Custom cursor */
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--matisse-red);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+.cursor-outline {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--matisse-blue);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  mix-blend-mode: difference;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--matisse-yellow);
+  color: var(--matisse-dark);
+}
+
+/* Smooth transitions */
+a, button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Loader */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--matisse-cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
