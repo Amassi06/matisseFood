@@ -15,14 +15,19 @@
 }
 
 :root {
-  /* Palette Matisse */
-  --matisse-blue: #1e3a8a;
-  --matisse-red: #dc2626;
-  --matisse-yellow: #fbbf24;
-  --matisse-green: #059669;
-  --matisse-orange: #ea580c;
-  --matisse-cream: #fef3e2;
-  --matisse-dark: #1a1a2e;
+  /* Palette Matisse Food */
+  --matisse-green-bottle: #1B4332;
+  --matisse-cream: #FEFAE0;
+  --matisse-terra-cotta: #BC6C25;
+  --matisse-green-light: #52B788;
+  
+  /* Legacy colors for existing components */
+  --matisse-blue: #1B4332;
+  --matisse-red: #BC6C25;
+  --matisse-yellow: #52B788;
+  --matisse-green: #52B788;
+  --matisse-orange: #BC6C25;
+  --matisse-dark: #1B4332;
 }
 
 * {
